@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      border-collapse: separate;
+      border-spacing: 0 10px;
+      width: 80%;
+      margin: 20px auto;
+    }
+    th {
+      text-align: left;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+    td {
+      padding: 10px;
+      background-color: #e0e0e0;
+      color: white;
+      font-weight: bold;
+    }
+    .label {
+      border-radius: 5px;
+      color: white;
+    }
+    .gray { background-color: #aab7b8; }
+    .green { background-color: #2e8b57; }
+    .teal { background-color: #81d8d0; }
+    .navy { background-color: #014f86; }
+    .blue { background-color: #5fa8d3; }
+    .value-cell {
+      background-color: #f9f9f9;
+      color: black;
+      font-weight: normal;
+      text-align: center;
+    }
+    .change {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th>2018</th>
+  </tr>
+  <tr>
+    <td class="label gray">XXXX</td>
+    <td class="value-cell">O XIX <span class="change">(+50)</span></td>
+  </tr>
+  <tr>
+    <td class="label green">XXXX</td>
+    <td class="value-cell">O XIX <span class="change">(+0)</span></td>
+  </tr>
+  <tr>
+    <td class="label teal">XXXX</td>
+    <td class="value-cell">O XIX <span class="change">(+5)</span></td>
+  </tr>
+  <tr>
+    <td class="label navy">XXXX</td>
+    <td class="value-cell">O XIX <span class="change">(+0.08)</span></td>
+  </tr>
+  <tr>
+    <td class="label blue">XXXX</td>
+    <td class="value-cell">O XIX <span class="change">(+1)</span></td>
+  </tr>
+</table>
+
+</body>
+</html>

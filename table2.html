@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Single Cell Column</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table  {
+      border-collapse: separate;
+      border-spacing: 0 10px;
+      width: 80%;
+      margin: 20px auto;
+    }
+    
+
+    th {
+      text-align: left;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+
+    td {
+      padding: 10px;
+      background-color: #e0e0e0;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+
+
+
+
+    .first {
+      border-bottom-left-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+    tr.grey th,
+tr.green th,
+tr.blue th,
+tr.navy th,
+tr.sea th {
+  background-color: inherit;
+}
+    .grey { background-color: rgb(174, 174, 174); }
+    .green { background-color: rgb(82, 143, 82); }
+    .blue { background-color: rgb(140, 189, 220); }
+    .navy { background-color: rgb(70, 70, 147); }
+    .sea { background-color: steelblue; }
+
+
+tr.init th {
+    background-color: white;
+}
+
+.live {
+    color: green;
+}
+   
+  </style>
+</head>
+<body>
+  <div id="er">
+    <table id="nm">
+      <tr class="init">
+        <th></th>
+        <th>2018</th>
+        <th>2017</th>
+        <th>2016</th>
+      </tr>
+      <tr class="grey">
+        <th class="first">XXXX1</th>
+        <td  rowspan="5">
+          &nbsp;O XIX <span class="live">&nbsp;&nbsp;&nbsp;(+50)</span><br><br><br>
+          &nbsp;O XIX <span class="live">&nbsp;&nbsp;&nbsp;(+1/0)</span><br><br><br>
+          &nbsp;O XIX <span class="live">&nbsp;&nbsp;&nbsp;(+0.01)</span><br><br><br>
+          &nbsp;O XIX <span class="live">&nbsp;&nbsp;&nbsp;(+30)</span><br><br><br>
+          &nbsp;O XIX <span class="live">&nbsp;&nbsp;&nbsp;(+.50)</span>
+        </td>
+        <td class="single-td" rowspan="5">
+          &nbsp;O XIX <span class="live">(+50)</span><br><br><br>
+          &nbsp;O XIX <span class="live">(+50)</span><br><br><br>
+          &nbsp;O XIX <span class="live">(+50)</span><br><br><br>
+          &nbsp;O XIX <span class="live">(+50)</span><br><br><br>
+          &nbsp;O XIX <span class="live">(+50)</span>
+        </td>
+        <td class="single-td" rowspan="5">
+          &nbsp;O XIX <span class="live">(+50)</span><br><br><br>
+          &nbsp;O XIX <span class="live">(+50)</span><br><br><br>
+          &nbsp;O XIX <span class="live">(+50)</span><br><br><br>
+          &nbsp;O XIX <span class="live">(+50)</span><br><br><br>
+          &nbsp;O XIX <span class="live">(+50)</span>
+        </td>
+      </tr>
+      <tr class="green">
+        <th class="first">XXXX</th>
+        
+      </tr>
+      <tr class="blue">
+        <th class="first">XXXX</th>
+        
+      </tr>
+      <tr class="navy">
+        <th class="first">XXXX</th>
+        
+      </tr>
+      <tr class="sea">
+        <th class="first">XXXX</th>
+        
+      </tr>
+    </table>
+  </div>
+
+  <style>
+    
+  </style>
+</body>
+</html>
