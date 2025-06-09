@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Item Manager</title>
+  <style>
+    
+    h2, h3 {
+      color: #fbfbfb;
+    }
+
+    form {
+      gap: 5px;
+      
+    }
+
+    input, select {
+      background-color: #ffffff;
+      color: #000000;
+      min-height: 40px;
+      margin: 5px;
+     
+    }
+
+    button {
+      padding: 10px;
+      margin-left: 20px;
+      margin-top: 20px;
+      background-color: #b6ffbf;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    
+    #itemList {
+      margin-top: 25px;
+    }
+
+    .item-card {
+      border-radius: 12px;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background: #0f0f0f;
+      color: #e0ffe0;
+      
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+ 
+    <h2>Item Manager</h2>
+    <form id="Form">
+      <input type="number" id="Id" placeholder="ID" required>
+      <input type="text" id="Name" placeholder="Name" required>
+      <br>
+      <input type="number" id="Price" placeholder="Price" required>
+      <input type="number" id="Nos" placeholder="Nos" required>
+      <select id="Stock">
+        <option value="true">In Stock</option>
+        <option value="false">Out of Stock</option>
+      </select>
+      <br>
+      <button type="submit">Add</button>
+    </form>
+
+    <h3>List of items with price greater than 500</h3>
+    <div id="itemList"></div>
+ 
+
+  <script>
+    const items = [];
+
+    document.getElementById('Form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const id = parseInt(document.getElementById('Id').value);
+      const name = document.getElementById('Name').value;
+      const price = parseFloat(document.getElementById('Price').value);
+      const quantity = parseInt(document.getElementById('Nos').value);
+      const stock = document.getElementById('Stock').value === "true";
+
+      items.push({ id, name, price, quantity, stock });
+
+      const expensiveItems = items.filter(item => item.price > 500);
+
+      const list = document.getElementById('itemList');
+      list.innerHTML = "";
+
+      expensiveItems.forEach(item => {
+        list.innerHTML += `
+          <div class="item-card">
+            <p>ID: ${item.id}</p>
+            <p>Name: ${item.name}</p>
+            <p>Price: ₹${item.price}</p>
+            <p>Nos: ${item.quantity}</p>
+            <p>Stock: ${item.stock ? 'Yes' : 'No'}</p>
+          </div>
+        `;
+      });
+
+    });
+  </script>
+
+</body>
+</html>

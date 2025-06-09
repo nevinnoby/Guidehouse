@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Form</title>
+    <style>
+        body {
+            background-image: url('download.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            padding: 70px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        p {
+            padding-bottom: 20px;
+            text-decoration: none;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-row label {
+            width: 150px;
+            margin-right: 10px;
+        }
+
+         input,select,textarea {
+            padding: 5px;
+            border: none;
+            margin-right: 15px;
+            font-size: 14px;
+            width: 160px;
+            flex: 1;
+            min-height: 0;
+        }
+
+        .form-row textarea {
+            height: 80px;
+            resize: vertical;
+        }
+
+        .robot-check {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #000;
+            margin-top: 5px;
+        }
+
+        .robot-check input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #33333300;
+            color: #fff;
+            border: 2px solid white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        hr {
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Form</h1>
+    <p>Please fill your information here</p>
+
+    <form action="">
+        <div class="form-row">
+            <label for="fname">Your Name</label>
+            <input type="text" name="fname" id="fname" placeholder="First Name">
+            <input type="text" name="lname" id="lname" placeholder="Last Name">
+        </div>
+        <div class="form-row">
+            <label for="mail">Your Email</label>
+            <input type="email" name="mail" id="mail" placeholder="eg. hello@example.com">
+        </div>
+        <div class="form-row">
+            <label>Phone*</label>
+            <input type="number" name="ph1" id="ph1" placeholder="###" required>
+            <input type="number" name="ph2" id="ph2" placeholder="###" required>
+            <input type="number" name="ph3" id="ph3" placeholder="###" required>
+        </div>
+        <div class="form-row">
+            <label for="message">Message Subject*</label>
+            <select name="message" id="message" required>
+                <option value="Others">Others</option>
+                <option value="opt1">Opt1</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="Text1">Message*</label>
+            <textarea id="Text1" name="Text1" required></textarea>
+        </div>
+        <div class="form-row">
+            <label>Verification*</label>
+            <div class="robot-check">
+                <input type="checkbox" id="robot-check" required>
+                <label for="robot-check" style="margin: 0; cursor: pointer;">I'm not a robot <img src="download.png" alt="img" style="vertical-align: middle; height: 20px;"></label>
+            </div>
+        </div>
+
+        <hr style="width: 100%;">
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
