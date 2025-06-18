@@ -99,12 +99,16 @@
       expensiveItems.forEach(item => {
         list.innerHTML += `
           <div class="item-card">
+            <p>----------------------------------------</p>
             <p>ID: ${item.id}</p>
             <p>Name: ${item.name}</p>
             <p>Price: ₹${item.price}</p>
             <p>Nos: ${item.quantity}</p>
             <p>Stock: ${item.stock ? 'Yes' : 'No'}</p>
+            <p>----------------------------------------</p>
+
           </div>
+
         `;
       });
 
